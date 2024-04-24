@@ -19,9 +19,6 @@ export class RecordId<Tb extends string = string> {
 	}
 
 	toJSON() {
-		return {
-			tb: this.tb,
-			id: this.id,
-		};
+		return `${this.tb}:${this.id}`
 	}
 }
